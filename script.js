@@ -8,8 +8,8 @@ const letters = [
     ],
     fallback: "Todo lo lindo de vos",
     paragraphs: [
-      "Amo la forma en que hacés que los días comunes se sientan especiales. Amo tu risa, tu manera de mirar el mundo y esa ternura que aparece incluso cuando no te das cuenta.",
-      "En tu cumpleaños quiero recordarte que sos una persona inmensa, de esas que dejan luz donde pasan. Gracias por existir y por dejarme acompañarte en este camino.",
+      "Amo la forma en que hacés que los días comunes se sientan especiales. Amo tu risa, tu manera de mirar el mundo, amo el como comprendes cada aspecto de la vida y esa ternura que aparece incluso cuando no te das cuenta.",
+      "En tu cumpleaños quiero recordarte que sos una persona inmensa, a como te lo he dicho siempre, sos la luz de mi vida y de las personas que te rodean. Gracias por existir y por dejarme acompañarte en este camino, sos mi vida Daiarita.",
     ],
     signature: "Con todo mi amor,\nTu tito",
   },
@@ -22,7 +22,7 @@ const letters = [
     ],
     fallback: "Nuestra historia",
     paragraphs: [
-      "Guardo nuestros recuerdos como pequeñas postales: cada conversación, cada abrazo, cada risa que nos encontró sin avisar. Con vos, hasta lo más simple se vuelve algo que quiero conservar.",
+      "Guardo nuestros recuerdos como pequeñas postales: cada conversación, cada abrazo, cada risa, no me arrepiento nuncade haberte contestado ese mensaje a mi estado y de seguir hablando con vos por los siguientes dias, cada año que he pasado con vos es un regalo que atesoro profundamente. Cada momento compartido es un tesoro que guardo en mi corazón, amo los dias en los que simplemente hablamos acostados en la cama y amo los dias en los dias en los que salimos, paseamos y nos divertimos juntos. Amo todo lo que hemos vivido y todo lo que nos queda por vivir.",
       "Ojalá sigamos llenando la vida de momentos nuestros, de planes improvisados y de historias que un día vamos a contar sonriendo. Mi lugar favorito siempre va a ser cerquita tuyo.",
     ],
     signature: "Siempre juntos,\nTu tito",
@@ -36,7 +36,7 @@ const letters = [
     ],
     fallback: "Que se cumpla todo",
     paragraphs: [
-      "Deseo que este nuevo año te encuentre rodeada de amor, proyectos bonitos y motivos para sonreír. Que nunca te falte la confianza para perseguir eso que te hace feliz.",
+      "Deseo que este nuevo año te encuentre rodeada de amor, proyectos bonitos y motivos para sonreír. Que nunca te falte la confianza para perseguir eso que te hace feliz. Espero que podas conseguir el trabajo que tanto deseas, que sigas aprendiendo, creciendo y que todo lo que te propongas se haga realidad. Que la vida te sorprenda con momentos de alegría y que cada día esté lleno de nuevas oportunidades.",
       "Y deseo poder estar ahí para celebrarte, cuidarte y recordarte cada vez que haga falta lo especial que sos. Feliz cumpleaños, mi amor. Te merecés todo lo hermoso.",
     ],
     signature: "Feliz cumpleaños,\nTu tito",
