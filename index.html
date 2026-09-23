@@ -124,6 +124,10 @@
       transition-delay: 0s, 0s, 420ms;
     }
 
+    .landing-view[hidden] {
+      display: none;
+    }
+
     .photo-collage {
       position: relative;
       width: min(100%, 510px);
@@ -800,7 +804,7 @@
       renderLetter(index);
       activeEnvelope.classList.add("is-opening");
       landingView.classList.add("is-leaving");
-      window.setTimeout(() => { letterView.classList.add("is-visible"); letterView.setAttribute("aria-hidden", "false"); letterView.inert = false; backButton.focus(); isTransitioning = false; }, 440);
+      window.setTimeout(() => { landingView.hidden = true; window.scrollTo(0, 0); letterView.classList.add("is-visible"); letterView.setAttribute("aria-hidden", "false"); letterView.inert = false; backButton.focus(); isTransitioning = false; }, 440);
     }
     function closeLetter() {
       if (isTransitioning || !activeEnvelope) return;
@@ -808,6 +812,7 @@
       letterView.classList.remove("is-visible");
       letterView.setAttribute("aria-hidden", "true");
       letterView.inert = true;
+      landingView.hidden = false;
       landingView.classList.remove("is-leaving");
       window.setTimeout(() => { activeEnvelope.classList.remove("is-opening"); activeEnvelope.focus(); isTransitioning = false; }, 480);
     }
