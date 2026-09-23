@@ -35,5 +35,10 @@ assert(/\.photo-fallback\[hidden\]\s*\{\s*display:\s*none/.test(css), "el fallba
 assert(/\.landing-view\[hidden\]\s*\{\s*display:\s*none/.test(css), "la portada oculta no debe reservar una pantalla vacía");
 assert(script.includes("landingView.hidden = true"), "la portada debe salir del flujo al abrir una carta");
 assert(script.includes("landingView.hidden = false"), "la portada debe volver al flujo al cerrar una carta");
+assert((script.match(/^\s{4}theme:/gm) ?? []).length === 3, "cada carta debe mostrar theme en su propia línea");
+assert((script.match(/^\s{4}title:/gm) ?? []).length === 3, "cada carta debe mostrar title en su propia línea");
+assert((script.match(/^\s{4}signature:/gm) ?? []).length === 3, "cada carta debe mostrar signature en su propia línea");
+assert((script.match(/images\/Fotos Nosotros Juntos/g) ?? []).length === 6, "deben conservarse las seis referencias de fotos");
+assert(!script.includes("\\\\nTu tito"), "las firmas no deben escapar dos veces el salto de línea");
 
 console.log("check-collage: OK");
