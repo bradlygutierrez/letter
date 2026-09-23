@@ -259,6 +259,19 @@
       outline-offset: 4px;
     }
 
+    .envelope-card.is-opening {
+      transform: translateY(-10px) scale(1.08) rotate(-1deg);
+      box-shadow: 0 34px 56px rgba(93, 49, 47, .24);
+    }
+
+    .envelope-card:nth-child(2).is-opening {
+      transform: translateY(-10px) scale(1.08) rotate(1deg);
+    }
+
+    .envelope-card:nth-child(3).is-opening {
+      transform: translateY(-10px) scale(1.08) rotate(-.7deg);
+    }
+
     .envelope-card:nth-child(2):hover {
       transform: translateY(-7px) rotate(.6deg);
     }
@@ -379,7 +392,7 @@
     }
 
     .envelope-card.is-opening .envelope-flap {
-      transform: rotateX(176deg);
+      transform: rotateX(188deg) translateY(-7px);
       opacity: .7;
     }
 
@@ -736,9 +749,9 @@
   </main>
   <script>
     const letters = [
-      { theme: "Una verdad sencilla", title: "Lo que amo de vos", images: ["images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.02.16%20PM.jpeg", "images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.02.28%20PM.jpeg"], fallback: "Todo lo lindo de vos", paragraphs: ["Amo la forma en que hacés que los días comunes se sientan especiales. Amo tu risa, tu manera de mirar el mundo y esa ternura que aparece incluso cuando no te das cuenta.", "En tu cumpleaños quiero recordarte que sos una persona inmensa, de esas que dejan luz donde pasan. Gracias por existir y por dejarme acompañarte en este camino."], signature: "Con todo mi amor,\nTu pollito" },
-      { theme: "Nuestros pequeños tesoros", title: "Nuestros recuerdos", images: ["images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.04.39%20PM.jpeg", "images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.08.51%20PM.jpeg"], fallback: "Nuestra historia", paragraphs: ["Guardo nuestros recuerdos como pequeñas postales: cada conversación, cada abrazo, cada risa que nos encontró sin avisar. Con vos, hasta lo más simple se vuelve algo que quiero conservar.", "Ojalá sigamos llenando la vida de momentos nuestros, de planes improvisados y de historias que un día vamos a contar sonriendo. Mi lugar favorito siempre va a ser cerquita tuyo."], signature: "Siempre juntos,\nTu pollito" },
-      { theme: "Un nuevo año para brillar", title: "Deseos para tu cumpleaños", images: ["images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.09.07%20PM.jpeg", "images/Fotos%20Nosotros%20Juntos/WhatsApp%20Image%202026-09-22%20at%2010.02.28%20PM.jpeg"], fallback: "Que se cumpla todo", paragraphs: ["Deseo que este nuevo año te encuentre rodeada de amor, proyectos bonitos y motivos para sonreír. Que nunca te falte la confianza para perseguir eso que te hace feliz.", "Y deseo poder estar ahí para celebrarte, cuidarte y recordarte cada vez que haga falta lo especial que sos. Feliz cumpleaños, mi amor. Te merecés todo lo hermoso."], signature: "Feliz cumpleaños,\nTu pollito" }
+      { theme: "Una verdad sencilla", title: "Lo que amo de vos", images: ["images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.02.16 PM.jpeg", "images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.02.28 PM.jpeg"], fallback: "Todo lo lindo de vos", paragraphs: ["Amo la forma en que hacés que los días comunes se sientan especiales. Amo tu risa, tu manera de mirar el mundo y esa ternura que aparece incluso cuando no te das cuenta.", "En tu cumpleaños quiero recordarte que sos una persona inmensa, de esas que dejan luz donde pasan. Gracias por existir y por dejarme acompañarte en este camino."], signature: "Con todo mi amor,\nTu pollito" },
+      { theme: "Nuestros pequeños tesoros", title: "Nuestros recuerdos", images: ["images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.04.39 PM.jpeg", "images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.08.51 PM.jpeg"], fallback: "Nuestra historia", paragraphs: ["Guardo nuestros recuerdos como pequeñas postales: cada conversación, cada abrazo, cada risa que nos encontró sin avisar. Con vos, hasta lo más simple se vuelve algo que quiero conservar.", "Ojalá sigamos llenando la vida de momentos nuestros, de planes improvisados y de historias que un día vamos a contar sonriendo. Mi lugar favorito siempre va a ser cerquita tuyo."], signature: "Siempre juntos,\nTu pollito" },
+      { theme: "Un nuevo año para brillar", title: "Deseos para tu cumpleaños", images: ["images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.09.07 PM.jpeg", "images/Fotos Nosotros Juntos/WhatsApp Image 2026-09-22 at 10.02.28 PM.jpeg"], fallback: "Que se cumpla todo", paragraphs: ["Deseo que este nuevo año te encuentre rodeada de amor, proyectos bonitos y motivos para sonreír. Que nunca te falte la confianza para perseguir eso que te hace feliz.", "Y deseo poder estar ahí para celebrarte, cuidarte y recordarte cada vez que haga falta lo especial que sos. Feliz cumpleaños, mi amor. Te merecés todo lo hermoso."], signature: "Feliz cumpleaños,\nTu pollito" }
     ];
     const landingView = document.getElementById("landingView");
     const letterView = document.getElementById("letterView");
