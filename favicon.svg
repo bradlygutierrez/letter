@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sobre romántico">
+  <rect width="64" height="64" rx="14" fill="#f8efe4" />
+  <path d="M10 20h44v30H10z" fill="#e7a6ad" />
+  <path d="M10 20l22 18 22-18" fill="#f5c9c2" />
+  <path d="M10 50l17-16 5 4 5-4 17 16" fill="#d98e9b" />
+  <path d="M32 43c-7-4-9-8-6-11 2-2 5-1 6 1 1-2 4-3 6-1 3 3 1 7-6 11z" fill="#7a3d4f" />
+</svg>

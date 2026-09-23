@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const cssUrl = new URL("../styles.css", import.meta.url);
 const scriptUrl = new URL("../script.js", import.meta.url);
+const faviconUrl = new URL("../favicon.svg", import.meta.url);
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -10,16 +11,20 @@ function assert(condition, message) {
 
 assert(existsSync(cssUrl), "falta styles.css");
 assert(existsSync(scriptUrl), "falta script.js");
+assert(existsSync(faviconUrl), "falta favicon.svg");
 
 const css = readFileSync(cssUrl, "utf8");
 const script = readFileSync(scriptUrl, "utf8");
+const favicon = readFileSync(faviconUrl, "utf8");
 
 assert(html.includes('<link rel="stylesheet" href="styles.css" />'), "index.html debe enlazar styles.css");
 assert(html.includes('<script src="script.js"></script>'), "index.html debe enlazar script.js");
+assert(html.includes('<link rel="icon" type="image/svg+xml" href="favicon.svg" />'), "index.html debe enlazar favicon.svg");
 assert(!/<style>[\s\S]*<\/style>/.test(html), "index.html no debe contener CSS inline");
 assert(!/<script>([\s\S]*)<\/script>/.test(html), "index.html no debe contener JavaScript inline");
 assert(css.includes(".photo-collage"), "styles.css debe contener los estilos de la portada");
 assert(script.includes("const letters = ["), "script.js debe contener los datos de las cartas");
+assert(favicon.includes('aria-label="Sobre romántico"'), "el favicon debe identificar el sobre romántico");
 assert((html.match(/class="photo-collage"/g) ?? []).length === 1, "falta el collage de portada");
 assert((html.match(/Fotos%20Daiara%20Bebe/g) ?? []).length === 6, "el collage debe tener seis fotos de bebé");
 assert(html.includes('id="letterImageOne"'), "falta la primera imagen de carta");
