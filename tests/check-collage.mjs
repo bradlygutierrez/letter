@@ -12,6 +12,6 @@ assert(html.includes('id="letterImageOne"'), "falta la primera imagen de carta")
 assert(html.includes('id="letterImageTwo"'), "falta la segunda imagen de carta");
 assert((html.match(/images:\s*\[/g) ?? []).length === 3, "cada carta debe declarar su par de imágenes");
 assert(!html.includes("images/carta-"), "quedó una ruta antigua de imagen");
-assert(!html.match(/images:\s*\[[^\]]*Fotos%20Nosotros%20Juntos/), "las rutas dinámicas no deben codificar los espacios dos veces");
+assert(/\.photo-fallback\[hidden\]\s*\{\s*display:\s*none/.test(html), "el fallback oculto no debe cubrir las fotos");
 
 console.log("check-collage: OK");
